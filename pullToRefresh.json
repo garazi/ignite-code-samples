@@ -1,0 +1,7 @@
+{
+    "_type": "Refresh",
+    "attributes": {
+        "_target": "[[$self.datasource.id]]"
+    },
+    "on": "pullToRefresh"
+}

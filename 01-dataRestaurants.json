@@ -1,0 +1,11 @@
+{
+    "_id": "dataRestaurants",
+    "_type": "HTTP",
+    "actions": [],
+    "attributes": {
+        "autoLoad.enabled": true,
+        "**url": "http://grewis-test.apigee.net/api-mobile-app/yelp?term=[[$session.searchTerm]]&ll=[[$device.location.lat]],[[$device.location.long]]",
+        "url": "http://api.usergrid.com/YOURORGNAME/sandbox/restaurants",
+        "method": "GET"
+    }
+}

@@ -1,0 +1,14 @@
+{
+    "_type": "Refresh",
+    "attributes": {
+        "_target": "collectionRestaurants"
+    },
+    "on": "success"
+}, {
+    "_type": "Function",
+    "attributes": {
+        "_target": "collectionRestaurants",
+        "functionName": "pullToRefresh.end"
+    },
+    "on": "success"
+}

@@ -1,0 +1,23 @@
+{
+    "$view": {
+        "actions": [],
+        "attributes": {
+            "_id": "restaurantDetail",
+            "bg.color": "#ffffff",
+            "statusBar.style": "dark"
+        },
+        "controls": [{
+            "_id": "layoutMain",
+            "_type": "Layout",
+            "attributes": {
+                "align.h": "center",
+                "align.v": "middle",
+                "layoutType": "absolute",
+                "size.h": "100%",
+                "size.w": "100%"
+            },
+            "controls": []
+        }],
+        "datasources": []
+    }
+}

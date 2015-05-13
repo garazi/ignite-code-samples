@@ -1,0 +1,56 @@
+
+{
+                "_id": "collectionRestaurants",
+                "_type": "Collection",
+                "attributes": {
+                    "autofill.w": true,
+                    "cell.size.h": 40,
+                    "cell.size.w": "100%",
+                    "datasource.id": "dataRestaurants",
+                    "data.basepath": "entities",
+                    "enabled": true,
+                    "autofill.h": true,
+                    "margin.top": 70,
+                    "text.align": "left",
+                    "pullToRefresh.enabled": true
+                },
+                "actions": [],
+                "controls": [{
+                    "_id": "layoutDivider",
+                    "_type": "Layout",
+                    "attributes": {
+                        "bg.color": "#CCCCCC",
+                        "layoutType": "absolute",
+                        "size.h": 1,
+                        "size.w": "100%",
+                        "align.v": "bottom"
+                    }
+                }, {
+                    "_type": "Text",
+                    "attributes": {
+                        "color": "#6c6c6c",
+                        "font": "HelveticaNeue-Light:16",
+                        "sizeToFit.enabled": true,
+                        "margin.left": 15,
+                        "margin.right": 20,
+                        "text.align": "left",
+                        "align.v": "middle",
+                        "layoutType": "absolute",
+                        "text": "[[$row.name]]"
+                    }
+                }, {
+                    "_type": "Text",
+                    "attributes": {
+                        "color": "#FF4300",
+                        "font": "FontAwesome:18",
+                        "sizeToFit.enabled": true,
+                        "margin.left": 20,
+                        "margin.right": 15,
+                        "text.align": "left",
+                        "align.v": "middle",
+                        "align.h": "right",
+                        "layoutType": "absolute",
+                        "text": "fa-angle-right"
+                    }
+                }]
+            }

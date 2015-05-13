@@ -1,0 +1,61 @@
+{
+
+    "_id": "layoutHeader",
+    "_type": "Layout",
+    "attributes": {
+        "bg.color": "#ffffff",
+        "layoutType": "absolute",
+        "size.h": 70,
+        "size.w": "100%"
+    },
+    "controls": [{
+        "_id": "headerTitle",
+        "_type": "Text",
+        "actions": [{
+            "_type": "Function",
+            "attributes": {
+                "_target": "actionSheetTest",
+                "functionName": "present"
+            },
+            "on": "touchUp"
+        }],
+        "attributes": {
+            "align.h": "center",
+            "align.v": "middle",
+            "color": "#FF4300",
+            "font": "HelveticaNeue-Thin:24",
+            "layoutType": "absolute",
+            "padding.left": 30,
+            "padding.right": 30,
+            "padding.top": 20,
+            "*size.h": 50,
+            "sizeToFit.enabled": true,
+            "text": "[[$session.restaurantName]]",
+            "text.align": "center"
+        }
+    }, {
+        "_id": "imageLeft",
+        "_type": "Text",
+        "actions": [{
+            "_type": "Navigate",
+            "attributes": {
+                "stackType": "pop"
+            },
+            "on": "touchUp"
+        }],
+        "attributes": {
+            "align.h": "left",
+            "align.v": "middle",
+            "color": "#FF4300",
+            "font": "FontAwesome:28",
+            "layoutType": "float",
+            "margin.left": 10,
+            "padding.top": 10,
+            "size.h": 28,
+            "size.w": 28,
+            "text": "fa-angle-left",
+            "visible": true
+        }
+    }]
+
+}

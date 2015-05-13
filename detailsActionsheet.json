@@ -1,0 +1,30 @@
+{
+    "_id": "actionSheetTest",
+    "_type": "ActionSheet",
+    "actions": [{
+        "_type": "Alert",
+        "attributes": {
+            "title": "Cancel Pressed"
+        },
+        "on": "cancel"
+    }, {
+        "_type": "Navigate",
+        "attributes": {
+            "stackType": "external",
+            "to": "tel://18005551212"
+        },
+        "on": "call"
+    }, {
+        "_type": "Navigate",
+        "attributes": {
+            "stackType": "external",
+            "to": "mailto://me@me.com"
+        },
+        "on": "email"
+    }],
+    "attributes": {
+        "buttons.cancel": "Cancel",
+        "buttons.others": "Email,Call",
+        "style": "black.opaque"
+    }
+}

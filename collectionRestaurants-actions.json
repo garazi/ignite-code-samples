@@ -1,0 +1,32 @@
+{
+    "_type": "Refresh",
+    "attributes": {
+        "_target": "[[$self.datasource.id]]"
+    },
+    "on": "pullToRefresh"
+}, {
+    "_type": "Modify",
+    "attributes": {
+        "_target": "$session"
+    },
+    "on": "touchUp",
+    "set": {
+        "restaurantName": "[[$row.name]]",
+        "restID": "[[$row.restID]]",
+        "restAddr": "[[$row.address]]",
+        "restCity": "[[$row.city]], [[$row.state]]",
+        "restPhone": "[[$row.phone]]",
+        "restLat": "[[$row.location.latitude]]",
+        "restLon": "[[$row.location.longitude]]",
+        "restRate": "[[$row.rating]]"
+    }
+}, {
+    "_type": "Navigate",
+    "attributes": {
+        "*nav_animation_duration": 0,
+        "*nav_animation_type": "crossDissolve",
+        "*nav_stack_type": "push",
+        "to": "viewRestaurantDetail.json"
+    },
+    "on": "touchUp"
+}

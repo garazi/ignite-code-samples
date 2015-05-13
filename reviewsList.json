@@ -1,0 +1,245 @@
+{
+    "_id": "layoutReviews",
+    "_type": "Layout",
+    "attributes": {
+        "align.h": "center",
+        "autofill.h": true,
+        "layoutType": "relative",
+        "margin.top": 350,
+        "padding.left": 5,
+        "padding.right": 5,
+        "size.w": "100%"
+    },
+    "controls": [{
+        "_id": "layoutReviewsHeader",
+        "_type": "Layout",
+        "attributes": {
+            "bg.color": "#ffffff",
+            "layoutType": "absolute",
+            "size.h": 70,
+            "size.w": "100%"
+        },
+        "controls": [{
+            "_id": "reviewsTitle",
+            "_type": "Text",
+            "actions": [],
+            "attributes": {
+                "align.h": "left",
+                "align.v": "middle",
+                "color": "#FF4300",
+                "font": "HelveticaNeue-Thin:18",
+                "layoutType": "absolute",
+                "margin.left": 10,
+                "padding.top": 0,
+                "size.h": 50,
+                "size.w": "100%",
+                "sizeToFit.enabled": true,
+                "text": "Reviews",
+                "text.align": "left"
+            }
+        }, {
+            "_id": "imageRight",
+            "_type": "Text",
+            "actions": [{
+                "_type": "Navigate",
+                "attributes": {
+                    "*animation.duration": 0.5,
+                    "*animation.type": "flip.r",
+                    "*stackType": "push",
+                    "to": "viewRestaurantReview.json"
+                },
+                "on": "touchUp"
+            }],
+            "attributes": {
+                "align.h": "right",
+                "align.v": "top",
+                "color": "#FF4300",
+                "font": "FontAwesome:20",
+                "layoutType": "float",
+                "margin.right": 10,
+                "padding.top": 0,
+                "size.h": 44,
+                "size.w": 44,
+                "text": "fa-pencil",
+                "text.align": "right",
+                "visible": true
+            }
+        }]
+    }, {
+        "_id": "myActivityIndicator",
+        "_type": "ActivityIndicator",
+        "attributes": {
+            "align.h": "center",
+            "align.v": "middle",
+            "color": "#fa4c06",
+            "layoutType": "float",
+            "size": "large"
+        }
+    }, {
+        "_id": "noReviewsText",
+        "_type": "Text",
+        "attributes": {
+            "align.h": "left",
+            "font": "HelveticaNeue-Thin:16",
+            "margin.top": 40,
+            "padding.left": 5,
+            "size.w": "100%",
+            "text": "Be the first to write a Review",
+            "text.align": "left",
+            "visible": false
+        }
+    }, {
+        "_id": "tableviewReviews",
+        "_type": "TableView",
+        "attributes": {
+            "*cell.size.h": 30,
+            "autofill.h": true,
+            "autofill.w": true,
+            "cell.size.w": "100%",
+            "datasource.id": "dataReviews",
+            "data.basepath": "reviews.0.entities",
+            "enabled": true,
+            "margin.top": 40,
+            "separator.style": "none",
+            "visible": false
+        },
+        "controls": [{
+            "_id": "reviewLayout",
+            "_type": "Layout",
+            "attributes": {
+                "padding": 5,
+                "size.w": 320
+            },
+            "controls": [{
+                "_id": "reviewTitle",
+                "_type": "Text",
+                "attributes": {
+                    "color": "#6c6c6c",
+                    "font": "HelveticaNeue-Light:14",
+                    "margin.top": 10,
+                    "padding.right": [
+                        "if :: [[$row.rating]] == 1 :: 20",
+                        "if :: [[$row.rating]] == 2 :: 35",
+                        "if :: [[$row.rating]] == 3 :: 50",
+                        "if :: [[$row.rating]] == 4 :: 65",
+                        "if :: [[$row.rating]] == 5 :: 80"
+                    ],
+                    "*size.h": "100%",
+                    "size.w": "100%",
+                    "text": "[[$row.title]]"
+                }
+            }, {
+                "_id": "ratingStarOne",
+                "_type": "Text",
+                "attributes": {
+                    "align.h": "right",
+                    "align.v": "top",
+                    "color": "#FF4300",
+                    "font": "FontAwesome:12",
+                    "layoutType": "float",
+                    "margin.right": 15,
+                    "margin.top": 18,
+                    "padding.top": 0,
+                    "text": "fa-star",
+                    "text.align": "right"
+                }
+            }, {
+                "_id": "ratingStarTwo",
+                "_type": "Text",
+                "attributes": {
+                    "align.h": "right",
+                    "align.v": "top",
+                    "color": "#FF4300",
+                    "font": "FontAwesome:12",
+                    "layoutType": "float",
+                    "margin.right": 30,
+                    "margin.top": 18,
+                    "padding.top": 0,
+                    "text": "fa-star",
+                    "text.align": "right",
+                    "visible": [
+                        "if :: [[$row.rating]] >== 2 :: true",
+                        "if :: [[$row.rating]] < 2 :: false"
+                    ]
+                }
+            }, {
+                "_id": "ratingStarThree",
+                "_type": "Text",
+                "attributes": {
+                    "align.h": "right",
+                    "align.v": "top",
+                    "color": "#FF4300",
+                    "font": "FontAwesome:12",
+                    "layoutType": "float",
+                    "margin.right": 45,
+                    "margin.top": 18,
+                    "padding.top": 0,
+                    "text": "fa-star",
+                    "text.align": "right",
+                    "visible": [
+                        "if :: [[$row.rating]] >== 3 :: true",
+                        "if :: [[$row.rating]] < 3 :: false"
+                    ]
+                }
+            }, {
+                "_id": "ratingStarFour",
+                "_type": "Text",
+                "attributes": {
+                    "align.h": "right",
+                    "align.v": "top",
+                    "color": "#FF4300",
+                    "font": "FontAwesome:12",
+                    "layoutType": "float",
+                    "margin.right": 60,
+                    "margin.top": 18,
+                    "padding.top": 0,
+                    "text": "fa-star",
+                    "text.align": "right",
+                    "visible": [
+                        "if :: [[$row.rating]] >== 4 :: true",
+                        "if :: [[$row.rating]] < 4 :: false"
+                    ]
+                }
+            }, {
+                "_id": "ratingStarFive",
+                "_type": "Text",
+                "attributes": {
+                    "align.h": "right",
+                    "align.v": "top",
+                    "color": "#FF4300",
+                    "font": "FontAwesome:12",
+                    "layoutType": "float",
+                    "margin.right": 75,
+                    "margin.top": 18,
+                    "padding.top": 0,
+                    "text": "fa-star",
+                    "text.align": "right",
+                    "visible": [
+                        "if :: [[$row.rating]] == 5 :: true",
+                        "if :: [[$row.rating]] < 5 :: false"
+                    ]
+                }
+            }, {
+                "_id": "reviewReviewer",
+                "_type": "Text",
+                "attributes": {
+                    "color": "#6c6c6c",
+                    "font": "HelveticaNeue-LightItalic:11",
+                    "*margin.top": 2,
+                    "text": "[[$row.reviewer]]"
+                }
+            }, {
+                "_id": "reviewBody",
+                "_type": "Text",
+                "attributes": {
+                    "color": "#6c6c6c",
+                    "font": "HelveticaNeue-Light:11",
+                    "*margin.top": 2,
+                    "padding.right": 5,
+                    "size.w": "100%",
+                    "text": "[[$row.body]]"
+                }
+            }]
+        }]
+    }]
+}

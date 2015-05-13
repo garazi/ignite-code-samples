@@ -1,0 +1,105 @@
+{
+    "_id": "restaurantDetails",
+    "_type": "Layout",
+    "attributes": {
+        "align.h": "center",
+        "align.v": "top",
+        "autofill.h": true,
+        "bg.color": "#ffffff",
+        "layoutType": "absolute",
+        "margin.top": 70,
+        "size.w": "100%"
+    },
+    "controls": [{
+        "_id": "layoutInfo",
+        "_type": "Layout",
+        "attributes": {
+            "align.h": "center",
+            "align.v": "top",
+            "layoutType": "absolute",
+            "size.h": "50%",
+            "size.w": "100%"
+        },
+        "actions": [{
+            "_type": "Function",
+            "attributes": {
+                "_target": "actionSheetTest",
+                "functionName": "present"
+            },
+            "on": "touchUp"
+        }],
+        "controls": [{
+            "_id": "restAddr",
+            "_type": "Text",
+            "attributes": {
+                "align.h": "center",
+                "align.v": "top",
+                "color": "#FF4300",
+                "font": "HelveticaNeue-Thin:16",
+                "layoutType": "float",
+                "padding.top": 0,
+                "size.h": 50,
+                "sizeToFit.enabled": true,
+                "text": "[[$session.restAddr]]",
+                "text.align": "center"
+            }
+        }, {
+            "_id": "restCity",
+            "_type": "Text",
+            "attributes": {
+                "align.h": "center",
+                "align.v": "top",
+                "color": "#FF4300",
+                "font": "HelveticaNeue-Thin:16",
+                "layoutType": "absolute",
+                "margin.top": 20,
+                "padding.top": 0,
+                "size.h": 50,
+                "sizeToFit.enabled": true,
+                "text": "[[$session.restCity]]",
+                "text.align": "center"
+            }
+        }, {
+            "_id": "restPhone",
+            "_type": "Text",
+            "attributes": {
+                "align.h": "center",
+                "align.v": "top",
+                "color": "#FF4300",
+                "font": "HelveticaNeue-Thin:14",
+                "layoutType": "absolute",
+                "margin.top": 40,
+                "padding.top": 0,
+                "size.h": 50,
+                "sizeToFit.enabled": true,
+                "text": "[[$session.restPhone]]",
+                "text.align": "center"
+            }
+        }]
+    }, {
+        "_id": "mapControl",
+        "_type": "Map",
+        "actions": [{
+            "_type": "Alert",
+            "attributes": {
+                "title": "You touched on [[$self.pin.title]]."
+            },
+            "on": "touchUp"
+        }],
+        "attributes": {
+            "animatePinDrop.enabled": true,
+            "margin.bottom": 75,
+            "margin.top": 75,
+            "pin": {
+                "lat": "[[$session.restLat]]",
+                "long": "[[$session.restLon]]",
+                "subtitle": "[[$session.restAddr]]",
+                "title": "[[$session.restaurantName]]"
+            },
+            "size.h": 200,
+            "size.w": "100%",
+            "userLocation.enabled": true,
+            "zoomLevel": 12
+        }
+    }]
+}
