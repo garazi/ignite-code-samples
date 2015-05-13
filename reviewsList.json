@@ -97,7 +97,7 @@
             "autofill.w": true,
             "cell.size.w": "100%",
             "datasource.id": "dataReviews",
-            "data.basepath": "reviews.0.entities",
+            "data.basepath": "entities",
             "enabled": true,
             "margin.top": 40,
             "separator.style": "none",
