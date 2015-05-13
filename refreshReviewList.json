@@ -1,0 +1,7 @@
+{
+    "_type": "Refresh",
+    "attributes": {
+        "_target": "dataReviews"
+    },
+    "on": "didAppear"
+}
