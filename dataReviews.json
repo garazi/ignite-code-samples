@@ -25,7 +25,7 @@
         "on": "success",
         "set": {
             "visible": [
-                "if :: [[dataReviews.response.body.reviews.0.count]] > 0 :: true :: false"
+                "if :: [[dataReviews.response.body.count]] > 0 :: true :: false"
             ]
         }
     }, {
@@ -43,7 +43,7 @@
         "on": "success",
         "set": {
             "visible": [
-                "if :: [[dataReviews.response.body.reviews.0.count]] > 0 :: false :: true"
+                "if :: [[dataReviews.response.body.count]] > 0 :: false :: true"
             ]
         }
     }],

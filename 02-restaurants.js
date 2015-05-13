@@ -59,6 +59,7 @@ function getReviews (req, res) {
             }
             results = {};
             results.entities = tempArray;
+            results.count = count;
             res.send(results);
 		}
 	});
