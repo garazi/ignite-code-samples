@@ -1,0 +1,35 @@
+  /reviews:
+    x-swagger-router-controller: reviews
+    x-volos-authorizations: {}
+    x-volos-apply: {}
+    post:
+      x-volos-apply: {}
+      description: Posts a new review
+      operationId: postReview
+      parameters:
+        - name: body
+          in: body
+          description: Post review and rating
+          required: true
+          schema:
+            properties:
+              title:
+                type: string
+              restID:
+                type: integer
+              rating:
+                type: integer
+              reviewer:
+                type: string
+              body:
+                type: string
+            required: ["title", "body", "rating"]
+      produces:
+        - application/json
+      responses:
+        "200":
+          description: Success
+          schema: {}
+        default:
+          description: Error
+          schema: {}
