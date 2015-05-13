@@ -10,8 +10,12 @@
         "200":
           description: Success
           schema:
-            # a pointer to a definition
-            $ref: "#/definitions/Entity"
+            type: object
+            required:
+              - entities
+            properties:
+              entities:
+                type: array
         # responses may fall through to errors
         default:
           description: Error
