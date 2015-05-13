@@ -24,8 +24,6 @@
               body:
                 type: string
             required: ["title", "body", "rating"]
-      produces:
-        - application/json
       responses:
         "200":
           description: Success
