@@ -108,7 +108,7 @@
             "_type": "Layout",
             "attributes": {
                 "padding": 5,
-                "size.w": 320
+                "size.w": "100%"
             },
             "controls": [{
                 "_id": "reviewTitle",
@@ -137,7 +137,7 @@
                     "color": "#FF4300",
                     "font": "FontAwesome:12",
                     "layoutType": "float",
-                    "margin.right": 15,
+                    "margin.right": 5,
                     "margin.top": 18,
                     "padding.top": 0,
                     "text": "fa-star",
@@ -152,7 +152,7 @@
                     "color": "#FF4300",
                     "font": "FontAwesome:12",
                     "layoutType": "float",
-                    "margin.right": 30,
+                    "margin.right": 20,
                     "margin.top": 18,
                     "padding.top": 0,
                     "text": "fa-star",
@@ -171,7 +171,7 @@
                     "color": "#FF4300",
                     "font": "FontAwesome:12",
                     "layoutType": "float",
-                    "margin.right": 45,
+                    "margin.right": 35,
                     "margin.top": 18,
                     "padding.top": 0,
                     "text": "fa-star",
@@ -190,7 +190,7 @@
                     "color": "#FF4300",
                     "font": "FontAwesome:12",
                     "layoutType": "float",
-                    "margin.right": 60,
+                    "margin.right": 50,
                     "margin.top": 18,
                     "padding.top": 0,
                     "text": "fa-star",
@@ -209,7 +209,7 @@
                     "color": "#FF4300",
                     "font": "FontAwesome:12",
                     "layoutType": "float",
-                    "margin.right": 75,
+                    "margin.right": 65,
                     "margin.top": 18,
                     "padding.top": 0,
                     "text": "fa-star",
