@@ -1,0 +1,56 @@
+{
+    "_id": "dataReviews",
+    "_type": "HTTP",
+    "actions": [{
+        "_type": "Modify",
+        "attributes": {
+            "_target": "myActivityIndicator"
+        },
+        "on": "success",
+        "set": {
+            "visible": false
+        }
+    }, {
+        "_type": "Modify",
+        "actions": [{
+            "_type": "Refresh",
+            "attributes": {
+                "_target": "layoutReviews"
+            },
+            "on": "finished"
+        }],
+        "attributes": {
+            "_target": "tableviewReviews"
+        },
+        "on": "success",
+        "set": {
+            "visible": [
+                "if :: [[dataReviews.response.body.reviews.0.count]] > 0 :: true :: false"
+            ]
+        }
+    }, {
+        "_type": "Modify",
+        "actions": [{
+            "_type": "Refresh",
+            "attributes": {
+                "_target": "layoutReviews"
+            },
+            "on": "success"
+        }],
+        "attributes": {
+            "_target": "noReviewsText"
+        },
+        "on": "success",
+        "set": {
+            "visible": [
+                "if :: [[dataReviews.response.body.reviews.0.count]] > 0 :: false :: true"
+            ]
+        }
+    }],
+    "attributes": {
+        "autoLoad.enabled": true,
+        "method": "GET",
+        "url": "http://localhost:10010/restaurants/[[$session.restID]]/reviews"
+
+    }
+}
