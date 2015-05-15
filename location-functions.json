@@ -1,0 +1,15 @@
+{
+    "_type": "Function",
+    "attributes": {
+        "_target": "$app",
+        "functionName": "location.beginTracking"
+    },
+    "on": "didBecomeActive, willEnterForeground"
+}, {
+    "_type": "Function",
+    "attributes": {
+        "_target": "$app",
+        "functionName": "location.endTracking"
+    },
+    "on": "didEnterBackground"
+}
