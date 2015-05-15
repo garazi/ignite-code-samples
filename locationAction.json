@@ -1,0 +1,15 @@
+{
+    "_type": "Function",
+    "attributes": {
+        "_target": "$app",
+        "functionName": "location.auth.request"
+    },
+    "on": "didAppear"
+}, {
+    "_type": "Refresh",
+    "attributes": {
+        "_target": "dataRestaurants"
+    },
+    "enabled": true,
+    "on": "didAppear"
+}
