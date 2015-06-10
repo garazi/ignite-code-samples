@@ -51,8 +51,12 @@
                         "text.align": "center"
                     }
                 }]
+            }, {
+                "<-- comment -->": "Replace this object with a Collection control"
             }]
         }],
-        "datasources": []
+        "datasources": [{
+            "<-- comment -->": "Replace this object with a HTTP Datasource"
+        }]
     }
 }

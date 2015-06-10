@@ -110,7 +110,7 @@
                 "padding.left": 5,
                 "padding.right": 5,
                 "padding.bottom": 15,
-                "size.w": "100%",
+                "size.w": "100%"
             },
             "controls": [{
                 "_id": "reviewTitle",
